@@ -157,3 +157,43 @@
                 isScrolling = setTimeout(handleScroll, 50);
             }, false);
         });
+
+        // Contact Page Form Submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const contactInput = document.querySelectorAll('.contact-input input, .contact-input textarea');
+            const contactButton = document.querySelector('.contact-input button');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const formDataObject = Object.fromEntries(formData);
+
+                console.log(formDataObject);
+            });
+        });
+
+        // Contact Page Form Submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactInput = document.querySelectorAll('.contact-input input, .contact-input textarea');
+            const contactButton = document.querySelector('.contact-input button');
+
+            contactInput.forEach(input => {
+                input.addEventListener('input', function () {
+                    if (input.value.length > 0) {
+                        input.classList.add('filled');
+                    } else {
+                        input.classList.remove('filled');      
+                    }
+                });
+            });
+
+            contactButton.addEventListener('click', function () {
+                const formData = new FormData(contactForm);
+                const formDataObject = Object.fromEntries(formData);
+
+                console.log(formDataObject);
+            }); 
+        });
+
+        
