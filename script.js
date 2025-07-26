@@ -196,4 +196,30 @@
             }); 
         });
 
+        // Responsive Navigation Bar (Mobile Hamburger)
+        document.addEventListener('DOMContentLoaded', function () {
+            const sideNav = document.getElementById('sideNav');
+            const navHamburger = document.getElementById('navHamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            // Toggle nav open/close on hamburger click
+            navHamburger.addEventListener('click', function () {
+                sideNav.classList.toggle('open');
+            });
+            navHamburger.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    sideNav.classList.toggle('open');
+                }
+            });
+
+            // Close nav when a link is clicked (on mobile)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) {
+                        sideNav.classList.remove('open');
+                    }
+                });
+            });
+        });
+
         

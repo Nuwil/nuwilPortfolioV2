@@ -15,6 +15,20 @@
 </head>
 
 <body>
+    <nav class="side-nav" id="sideNav">
+        <div class="nav-hamburger" id="navHamburger" aria-label="Open navigation" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#landingPage">Home</a></li>
+            <li><a href="#skillsPage">Skills</a></li>
+            <li><a href="#projectsPage">Projects</a></li>
+            <li><a href="#aboutPage">About</a></li>
+            <li><a href="#contactPage">Contact</a></li>
+        </ul>
+    </nav>
     <div class="stars" id="stars"></div>
 
     <!-- START OF HERO -->
@@ -44,7 +58,7 @@
         </div>
     </div>
 
-    <div id="aboutPage">
+    <div id="skillsPage">
         <div class="aboutContainer">
             <h2 class="sectionTitle">Current <span>Skills</span></h2>
             <p class="sectionSubtitle">I'm on an exciting learning journey with these technologies. Though still early
@@ -113,7 +127,7 @@
             </div>
 
             <!-- Add this right after your skillsGrid closing div -->
-            <div class="projects-section">
+            <div id="projectsPage" class="projects-section">
                 <h2 class="sectionTitle">My <span>Projects</span></h2>
                 <p class="sectionSubtitle">Here are some of the websites and applications I've built to practice and
                     showcase my skills.</p>
@@ -130,8 +144,7 @@
                         </div>
                         <div class="project-info">
                             <h3>Fast Food Online Booking/Ordering Website</h3>
-                            <p>This is a website that allows users to book a table or order food online. It is built
-                                with HTML, CSS, and JavaScript.</p>
+                            <p>This website is a simple online booking/ordering system for a fast food restaurant. It is built with HTML, CSS, and JavaScript. currently not working. not responsive.</p>
                         </div>
                     </a>
 
@@ -155,7 +168,7 @@
         </div>
     </div>
 
-    <div class="about-section">
+    <div id="aboutPage">
         <h2 class="sectionTitle">About Me</h2>
         <p class="sectionSubtitle">A brief introduction</p>
         <div class="about-content">

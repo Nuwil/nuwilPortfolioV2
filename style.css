@@ -15,6 +15,10 @@
          box-sizing: border-box;
      }
 
+     html {
+         scroll-behavior: smooth;
+     }
+
      body {
          margin: 0;
          padding: 0;
@@ -304,7 +308,7 @@
 
 
      /* About Page Styles */
-     #aboutPage {
+     #skillsPage {
          padding: 3rem 1rem;
          background: rgba(0, 0, 0, 0.7);
          min-height: 100vh;
@@ -501,10 +505,11 @@
          line-height: 1.5;
          margin: 0;
      }
-     .about-section {
+
+     #aboutPage {
          background: rgb(46 46 46 / 95%);
          border-radius: 1.5rem;
-         box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
          max-width: 800px;
          margin: 3rem auto 2rem auto;
          padding: 2.5rem 3rem;
@@ -513,7 +518,7 @@
          align-items: center;
      }
 
-     .about-section .sectionTitle {
+     #aboutPage .sectionTitle {
          font-size: 2.2rem;
          font-weight: 600;
          color: #fff;
@@ -522,7 +527,7 @@
      }
 
 
-     .about-section .sectionSubtitle {
+     #aboutPage .sectionSubtitle {
          color: var(--secondary-text, #b0b3c6);
          font-size: 1.1rem;
          margin-bottom: 1.5rem;
@@ -548,41 +553,43 @@
      }
 
      .contact-info {
-        max-width: 800px;
-        margin: 1rem auto;
+         max-width: 800px;
+         margin: 1rem auto;
          display: flex;
          flex-direction: column;
          align-items: center;
          gap: 1rem;
-     } 
+     }
+
      .contact-item {
          display: flex;
          align-items: center;
          gap: 0.5rem;
      }
+
      .contact-item i {
          font-size: 1.2rem;
      }
+
      .contact-item p {
          font-size: 1rem;
          color: var(--secondary-text);
      }
+
      .contact-item a {
          text-decoration: none;
      }
+
      .contact-item a:hover {
          color: #fff;
      }
+
      .contact-item a:hover i {
          transform: scale(1.1);
      }
+
      .contact-item a:hover p {
          color: #fff;
-     }
-     .contact-item a:hover i {
-         transform: scale(1.1);
-     }
-     .contact-item a:hover p {
      }
 
      .contact-input {
@@ -591,79 +598,94 @@
          align-items: center;
          gap: 1rem;
      }
-     .contact-input input {
-        min-width: 40%;
-        max-width: 40%;
-        width: 100%;
-        padding: 0.8rem;
-        border-radius: 0.5rem;
-        border: 1px solid #333;
-        background: #1a1a1a;
-        color: #fff;
-     }
+
+     .contact-input input,
      .contact-input textarea {
-        min-width: 40%;
-        max-width: 40%;
-        width: 100%;
-        padding: 0.8rem;
-        border-radius: 0.5rem;
-        border: 1px solid #333;
-        background: #1a1a1a;
-        color: #fff;
+         min-width: 300px;
+         max-width: 500px;
+         width: 100%;
+         padding: 1rem;
+         border-radius: 0.5rem;
+         border: 1px solid #333;
+         background: #1a1a1a;
+         color: #fff;
+         transition: all 0.3s ease;
+         font-family: inherit;
      }
+
+     .contact-input input:focus,
+     .contact-input textarea:focus {
+         outline: none;
+         border-color: #535353;
+         background: #222;
+         box-shadow: 0 0 10px rgba(83, 83, 83, 0.3);
+     }
+
+     .contact-input textarea {
+         min-height: 120px;
+         resize: vertical;
+     }
+
      .contact-input button {
-        width: 10%;
-        padding: 0.8rem;
-        border-radius: 0.5rem;
-        border: 1px solid #333;
-        background: #1a1a1a;
-        color: #fff;
+         min-width: 120px;
+         padding: 1rem 2rem;
+         border-radius: 0.5rem;
+         border: 1px solid #333;
+         background: #535353;
+         color: #fff;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         font-weight: 500;
+         font-family: inherit;
      }
+
      .contact-input button:hover {
-        background: #2a2a2a;
-        color: #fff;
-     }
-     .contact-input button:hover {
-        background: #2a2a2a;
-        color: #fff;
+         background: #666;
+         border-color: #777;
+         transform: translateY(-2px);
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
      }
 
      /* Footer Styles */
      footer {
-        background: rgba(20, 20, 20, 0.95);
-        color: #b0b3c6;
-        text-align: center;
-        padding: 2rem 0 1rem 0;
+         background: rgba(20, 20, 20, 0.95);
+         color: #b0b3c6;
+         text-align: center;
+         padding: 2rem 0 1rem 0;
      }
 
      footer p {
-        font-size: 0.98rem;
+         font-size: 0.98rem;
      }
-    
+
 
 
      /* Responsive styles for About Me section */
      @media (max-width: 900px) {
-         .about-section {
+         #aboutPage {
              max-width: 95vw;
              padding: 2rem 1.5rem;
          }
+
          .about-content {
              font-size: 1rem;
          }
      }
 
      @media (max-width: 600px) {
-         .about-section {
+         #aboutPage {
              padding: 1.2rem 0.7rem;
              border-radius: 1rem;
          }
-         .about-section .sectionTitle {
+
+         #aboutPage .sectionTitle {
              font-size: 1.5rem;
          }
-         .about-section .sectionSubtitle {
+
+         #aboutPage .sectionSubtitle {
              font-size: 1rem;
          }
+
          .about-content {
              font-size: 0.97rem;
              padding: 0 0.2rem;
@@ -790,5 +812,190 @@
 
          .skillsGrid {
              grid-template-columns: 1fr;
+         }
+     }
+
+     /* Side Navigation Styles */
+     .side-nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 100vh;
+         width: 60px;
+         background: transparent;
+         z-index: 1000;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+         overflow: visible;
+     }
+
+     .side-nav:hover,
+     .side-nav:focus-within,
+     .side-nav.open {
+         width: 200px;
+         background: rgba(30, 30, 30, 0.97);
+     }
+     
+     .side-nav:hover .nav-links,
+     .side-nav:focus-within .nav-links,
+     .side-nav.open .nav-links {
+         opacity: 1;
+         pointer-events: auto;
+     }
+
+     .nav-hamburger {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 60px;
+         height: 60px;
+         cursor: pointer;
+         z-index: 1100;
+         position: absolute;
+         top: 0;
+         left: 0;
+     }
+
+     .nav-hamburger span {
+         display: block;
+         width: 28px;
+         height: 3px;
+         margin: 5px 0;
+         background: #fff;
+         border-radius: 2px;
+         transition: all 0.3s;
+     }
+
+     .nav-links {
+         list-style: none;
+         padding: 0;
+         margin: 80px 0 0 0;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: 1.2rem;
+         opacity: 0;
+         pointer-events: none;
+         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+     }
+
+     .nav-links li {
+         width: 100%;
+     }
+
+     .nav-links a {
+         display: block;
+         padding: 0.8rem 1.2rem;
+         color: #fff;
+         text-decoration: none;
+         font-size: 1.1rem;
+         border-radius: 8px;
+         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+         white-space: nowrap;
+     }
+
+     .nav-links a:hover,
+     .nav-links a:focus {
+         background: #222;
+         color: #b0b3c6;
+     }
+
+     /* Hide nav text on desktop when not hovered */
+     .side-nav:not(:hover):not(:focus-within):not(.open) .nav-links a {
+         color: transparent;
+         background: transparent;
+         width: 0;
+         padding: 0;
+         overflow: hidden;
+         font-size: 0;
+         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+     }
+
+     .side-nav:not(:hover):not(:focus-within):not(.open) .nav-links {
+         opacity: 0;
+         pointer-events: none;
+     }
+
+     /* Responsive: Mobile styles */
+     @media (max-width: 768px) {
+         .side-nav {
+             width: 100vw;
+             height: 60px;
+             flex-direction: row;
+             align-items: center;
+             background: rgba(30, 30, 30, 0.97);
+             top: 0;
+             left: 0;
+             right: 0;
+             transition: height 0.3s, width 0.3s;
+         }
+
+         .nav-hamburger {
+             display: flex;
+             position: relative;
+         }
+
+         .nav-links {
+             position: absolute;
+             top: 60px;
+             left: 0;
+             width: 100vw;
+             background: rgba(30, 30, 30, 0.97);
+             flex-direction: column;
+             gap: 0;
+             margin: 0;
+             padding: 0.5rem 0;
+             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+             opacity: 0;
+             pointer-events: none;
+             transition: opacity 0.3s;
+         }
+
+         .side-nav.open .nav-links {
+             opacity: 1;
+             pointer-events: auto;
+         }
+
+         .nav-links a {
+             font-size: 1.1rem;
+             padding: 1rem 1.5rem;
+             color: #fff;
+             border-radius: 0;
+             border-bottom: 1px solid #222;
+         }
+
+         .side-nav:not(.open) .nav-links {
+             opacity: 0;
+             pointer-events: none;
+         }
+
+         .side-nav.open {
+             height: auto;
+         }
+
+         /* Hide nav links on mobile by default */
+         .nav-links {
+             display: flex;
+         }
+     }
+
+     @media (max-width: 480px) {
+         .nav-links a {
+             font-size: 1rem;
+             padding: 0.9rem 1.2rem;
+         }
+         
+         .contact-input input,
+         .contact-input textarea {
+             min-width: 280px;
+             max-width: 90vw;
+         }
+         
+         .contact-input button {
+             min-width: 100px;
+             padding: 0.8rem 1.5rem;
          }
      }
